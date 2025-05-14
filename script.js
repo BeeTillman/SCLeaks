@@ -1,6 +1,6 @@
 // Configuration: GitHub user, repo, and branch for content
-const GH_USER = 'YOUR_GITHUB_USERNAME';
-const GH_REPO = 'YOUR_REPOSITORY_NAME';
+const GH_USER = 'BeeTillman';
+const GH_REPO = 'SCLeaks';
 const GH_BRANCH = 'main';  // e.g., 'gh-pages' if using that branch for Pages
 
 // Paths to content folders in the repo
