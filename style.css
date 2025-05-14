@@ -136,3 +136,10 @@ details[open] summary::before {
 .detail-content a:hover {
   color: #82ffff;
 }
+/* Ensure images in markdown never stretch past their container */
+.detail-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.5em auto;
+}
