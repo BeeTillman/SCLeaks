@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star Citizen Updates</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sticky Navigation Bar -->
+    <nav>
+      <div class="logo">Star Citizen Tracker</div>
+      <div class="nav-links">
+        <a href="#data-mining">Data Mining</a>
+        <a href="#official-patch-notes">Official Patch Notes</a>
+      </div>
+    </nav>
+
+    <!-- Data Mining Section -->
+    <section id="data-mining">
+      <h2>Data Mining</h2>
+      <div id="datamine-list"><!-- updates will be injected here --></div>
+    </section>
+
+    <!-- Official Patch Notes Section -->
+    <section id="official-patch-notes">
+      <h2>Official Patch Notes</h2>
+      <div id="patch-list"><!-- updates will be injected here --></div>
+    </section>
+  </div>
+
+  <!-- Markdown parser and sanitization libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.7/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.5/purify.min.js"></script>
+  <!-- Main script to load and render content -->
+  <script src="script.js"></script>
+</body>
+</html>
