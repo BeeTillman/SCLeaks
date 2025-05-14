@@ -1,3 +1,5 @@
+/* style.css */
+
 /* Base styling for dark mode */
 body {
   background-color: #121212;
@@ -20,7 +22,7 @@ nav {
   align-items: center;
   padding: 0.5em 1em;
   border-bottom: 1px solid #333;
-  z-index: 1000;  /* ensure nav stays on top */
+  z-index: 1000;
 }
 nav .logo {
   font-weight: bold;
@@ -35,18 +37,23 @@ nav .logo {
   text-decoration: none;
   margin-left: 1.5em;
 }
-.nav-links a:hover {
-  color: #ffffff;
+.nav-links a:hover,
+.nav-links a:focus,
+.nav-links a.active {
+  color: #4FC3F7;  /* light blue accent */
 }
 
 /* Section headings */
+h1, h2 {
+  color: #4FC3F7;  /* accent for all headings */
+}
 section h2 {
   font-size: 1.5em;
   margin: 1em 0 0.5em;
-  color: #ffffff;
+  /* inherits accent color from h2 */
 }
 
-/* Ensure anchored sections scroll below nav (offset for sticky nav) */
+/* Ensure anchored sections scroll below nav */
 section {
   scroll-margin-top: 60px;
 }
@@ -60,25 +67,23 @@ details {
 }
 details summary {
   list-style: none;
-  /* Hide default marker (especially for Safari) */
   -webkit-details-marker: none;
   display: block;
   cursor: pointer;
   padding: 0.5em 1em;
   background-color: #2c2c2c;
-  color: #ffffff;
+  color: #4FC3F7;         /* accent summary text */
   font-weight: 600;
   font-size: 1.1em;
 }
 details summary:hover {
   background-color: #3a3a3a;
 }
-/* Custom arrow indicator for collapsible */
 details summary::before {
   content: "▶";
   display: inline-block;
   margin-right: 0.5em;
-  color: #ffffff;
+  color: #4FC3F7;         /* accent arrow */
 }
 details[open] summary::before {
   content: "▼";
@@ -89,7 +94,7 @@ details[open] summary::before {
   padding: 0.5em 1em;
   border-top: 1px solid #333;
 }
-/* Style markdown content (typography) */
+/* Markdown-styled content */
 .detail-content h1,
 .detail-content h2,
 .detail-content h3,
@@ -99,20 +104,16 @@ details[open] summary::before {
   color: #ffffff;
   margin: 0.5em 0;
 }
-.detail-content h1 { font-size: 1.25em; }
-.detail-content h2 { font-size: 1.15em; }
-.detail-content h3 { font-size: 1.05em; }
-/* Paragraphs and list spacing */
 .detail-content p {
   margin: 0.5em 0;
 }
-.detail-content ul, .detail-content ol {
+.detail-content ul,
+.detail-content ol {
   margin: 0.5em 0 0.5em 1.5em;
 }
 .detail-content li {
   margin: 0.3em 0;
 }
-/* Inline code and code blocks */
 .detail-content code {
   font-family: monospace;
   background-color: #272727;
@@ -129,9 +130,8 @@ details[open] summary::before {
   padding: 0.5em;
   overflow-x: auto;
 }
-/* Links in content */
 .detail-content a {
-  color: #4dd0e1;
+  color: #4FC3F7;
 }
 .detail-content a:hover {
   color: #82ffff;
